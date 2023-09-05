@@ -19,6 +19,7 @@ public class Main {
        // ReadFromConsole.getReadWrite();
        // Exo1.getExercice3();3
       //  Structure2.getBoucleFor();
-        Structure2.getDoWhile();
+       // Structure2.getDoWhile();
+        Structure2.getBreakAndContinue();
     }
 }

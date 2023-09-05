@@ -18,19 +18,43 @@ public class Structure2 {
             sum += numb;
         }
         System.out.println("La somme du tableau est : " + sum);
-
     }
-
     public static void getDoWhile(){
-
         int i = 1;
-
         while (i<=5){
             System.out.println("i : " + i);
             i++;
         }
+    }
+
+    public static void getBreakAndContinue(){
+ /*       System.out.println("-----continue-----");
+
+        for (int i = 0; i < 5; i++) {
+
+            if(i%2==0){
+                System.out.println("ça continue...");
+                continue;
+            }
+            System.out.println("counter : " + i);
+        }*/
+
+
+        for (int i = 0; i < 5 ; i++) {
+            for (int j = 0; j < 5; j++) {
+
+                if(j==3){
+                    break;
+                }
+                System.out.println("j " + j);
+            }
+            System.out.println("counter " + i);
+        }
+
 
     }
+
+
 
 
 }
