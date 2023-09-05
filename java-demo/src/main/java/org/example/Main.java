@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.exercices.Exo1;
 import org.example.operator.Operator;
 import org.example.readFromConsole.ReadFromConsole;
 import org.example.structure.Structure;
@@ -14,6 +15,7 @@ public class Main {
         // Operator.getExepressionType();
         //Operator.getOperatorAndComparaison();
        // Structure.getSwitch();
-        ReadFromConsole.getReadWrite();
+       // ReadFromConsole.getReadWrite();
+        Exo1.getExercice3();
     }
 }
