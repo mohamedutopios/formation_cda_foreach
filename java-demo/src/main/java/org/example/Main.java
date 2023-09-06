@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.array.Array;
 import org.example.exercices.Exo1;
 import org.example.exercices.Exo2;
 import org.example.operator.Operator;
@@ -29,6 +30,7 @@ public class Main {
 
        // ChaineCaractere.getMethodString();
        // ChaineCaractere.getComparaisonString();
-        ChaineCaractere.getFormat();
+       // ChaineCaractere.getFormat();
+        Array.getArray();
     }
 }
