@@ -3,6 +3,7 @@ package org.example;
 import org.example.array.Array;
 import org.example.exercices.Exo1;
 import org.example.exercices.Exo2;
+import org.example.exercices.Exo3;
 import org.example.operator.Operator;
 import org.example.readFromConsole.ReadFromConsole;
 import org.example.string.ChaineCaractere;
@@ -26,11 +27,12 @@ public class Main {
       //  Structure2.getBoucleFor();
        // Structure2.getDoWhile();
         //Structure2.getBreakAndContinue();
-        //Exo2.calculSomme();
+        //Exo1.getExercice8();
 
        // ChaineCaractere.getMethodString();
        // ChaineCaractere.getComparaisonString();
        // ChaineCaractere.getFormat();
-        Array.getArray();
+        //Array.getArray();
+        Exo3.getDecalage();
     }
 }

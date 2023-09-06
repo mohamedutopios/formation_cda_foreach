@@ -128,6 +128,19 @@ public class Exo1 {
 
     public static void getExercice8() {
 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Donnez moi un nombre entre 1 et 3 :");
+
+        int nombre = scanner.nextInt();
+
+        while(nombre<1 || nombre > 3 ){
+            System.out.println("Donnez moi un nombre entre 1 et 3 :");
+            nombre = scanner.nextInt();
+        }
+
+        System.out.println("La réponse me convient...");
+
     }
 }
 

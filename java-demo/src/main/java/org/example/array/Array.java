@@ -19,7 +19,6 @@ public class Array {
             System.out.println(tab[i]);
         }
 
-
     }
 
 
