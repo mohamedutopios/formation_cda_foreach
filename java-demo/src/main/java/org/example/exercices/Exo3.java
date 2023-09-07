@@ -126,6 +126,28 @@ public class Exo3 {
         System.out.println(Arrays.toString(table));
     }
 
+    public static void exo3() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Donne moi un mot : ");
+        String myStr = scanner.next();
+        System.out.println("Donne moi un deuxième mot : ");
+        String myStr2 = scanner.next();
 
+        Boolean valid = true;
 
+        for (int i = 0; i < myStr2.length(); i++) {
+            if (myStr.contains(myStr2.substring(i, (i + 1)))) {
+                valid = true;
+
+            } else {
+                valid = false;
+
+            }
+        }
+        if (valid) {
+            System.out.println("les mot sont des anagrammes ");
+        } else {
+            System.out.println("les mot ne sont pas anagramme ");
+        }
+    }
 }
