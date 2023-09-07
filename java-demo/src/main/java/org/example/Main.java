@@ -6,6 +6,7 @@ import org.example.exercices.Exo2;
 import org.example.exercices.Exo3;
 import org.example.exercices.ExoString;
 import org.example.operator.Operator;
+import org.example.poo.Phone;
 import org.example.poo.Product;
 import org.example.readFromConsole.ReadFromConsole;
 import org.example.string.ChaineCaractere;
@@ -38,7 +39,7 @@ public class Main {
         // Exo3.getDecalage();
         //Exo3.exo3();
         //ExoString.getNbMots();
-        /*Product product = new Product();
+      /*  Product product = new Product();
         System.out.println(product);
         Product product1 = new Product(5, "telephone");
         System.out.println(product1);
@@ -48,6 +49,11 @@ public class Main {
         product1.quiSuisJe();
         Product.getBonjour();*/
 
+        Phone phone1 = new Phone(5,"iphone2",255);
+       // System.out.println(phone1.getPrix());
+        System.out.println(phone1);
+        phone1.quiSuisjee();
+        Phone.getBonjour();
 
     }
 }
