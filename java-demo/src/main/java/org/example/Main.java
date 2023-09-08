@@ -8,6 +8,7 @@ import org.example.exercices.ExoString;
 import org.example.operator.Operator;
 import org.example.poo.Phone;
 import org.example.poo.Product;
+import org.example.poo.statique.User;
 import org.example.readFromConsole.ReadFromConsole;
 import org.example.string.ChaineCaractere;
 import org.example.structure.Structure;
@@ -49,11 +50,19 @@ public class Main {
         product1.quiSuisJe();
         Product.getBonjour();*/
 
-        Phone phone1 = new Phone(5,"iphone2",255);
+        /*Phone phone1 = new Phone(5,"iphone2",255);
        // System.out.println(phone1.getPrix());
         System.out.println(phone1);
         phone1.quiSuisjee();
-        Phone.getBonjour();
+        Phone.getBonjour();*/
+
+        User user = new User();
+        user.setName("Thomas");
+        User user1 = new User("Michel");
+        User user2 = new User("Tom");
+        System.out.println(user);
+        System.out.println(user1);
+        System.out.println(user2);
 
     }
 }
