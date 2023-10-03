@@ -5,6 +5,7 @@ import org.example.exercices.Exo1;
 import org.example.exercices.Exo2;
 import org.example.exercices.Exo3;
 import org.example.exercices.ExoString;
+import org.example.generique.Boite;
 import org.example.operator.Operator;
 import org.example.poo.Phone;
 import org.example.poo.Product;
@@ -68,18 +69,23 @@ public class Main {
 
         // Les type enumeres (enum)
 
-        enum JourSemaine {
-            LUNDI,MARDI,MERCREDI
-        }
+//        enum JourSemaine {
+//            LUNDI,MARDI,MERCREDI
+//        }
+//
+//        JourSemaine today = JourSemaine.MERCREDI;
+//
+//        DayWeek tommorow = DayWeek.SAMEDI;
+//
+//        today = JourSemaine.MARDI;
+//
+//        System.out.println(today);
+//        System.out.println(tommorow);
 
-        JourSemaine today = JourSemaine.MERCREDI;
-
-        DayWeek tommorow = DayWeek.SAMEDI;
-
-        today = JourSemaine.MARDI;
-
-        System.out.println(today);
-        System.out.println(tommorow);
+        Boite<String> stringBoite = new Boite<String>("TOTO");
+        Boite<User> userBoite = new Boite<User>(new User("tata"));
+        stringBoite.getContenu();
+        userBoite.getContenu();
 
     }
 }
