@@ -56,13 +56,30 @@ public class Main {
         phone1.quiSuisjee();
         Phone.getBonjour();*/
 
-        User user = new User();
-        user.setName("Thomas");
-        User user1 = new User("Michel");
-        User user2 = new User("Tom");
-        System.out.println(user);
-        System.out.println(user1);
-        System.out.println(user2);
+//        User user = new User();
+//        user.setName("Thomas");
+//        User user1 = new User("Michel");
+//        User user2 = new User("Tom");
+//        System.out.println(user);
+//        System.out.println(user1);
+//        System.out.println(user2);
+//
+//        System.out.println(User.getCount());
+
+        // Les type enumeres (enum)
+
+        enum JourSemaine {
+            LUNDI,MARDI,MERCREDI
+        }
+
+        JourSemaine today = JourSemaine.MERCREDI;
+
+        DayWeek tommorow = DayWeek.SAMEDI;
+
+        today = JourSemaine.MARDI;
+
+        System.out.println(today);
+        System.out.println(tommorow);
 
     }
 }
