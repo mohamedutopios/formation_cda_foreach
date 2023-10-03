@@ -77,6 +77,6 @@ public class Reservation {
         for (Chambre chambre : listeChambres) {
             message += chambre + "\n";
         }
-        return message
+        return message;
     }
 }

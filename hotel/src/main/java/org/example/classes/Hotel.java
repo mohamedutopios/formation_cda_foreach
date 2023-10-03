@@ -18,6 +18,6 @@ public class Hotel {
     }
 
     private ArrayList<Chambre> genListChambres(){
-
+        return new ArrayList<>();
     }
 }
