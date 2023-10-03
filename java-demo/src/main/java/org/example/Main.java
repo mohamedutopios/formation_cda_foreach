@@ -1,10 +1,7 @@
 package org.example;
 
 import org.example.array.Array;
-import org.example.exercices.Exo1;
-import org.example.exercices.Exo2;
-import org.example.exercices.Exo3;
-import org.example.exercices.ExoString;
+import org.example.exercices.*;
 import org.example.generique.Boite;
 import org.example.operator.Operator;
 import org.example.poo.Phone;
@@ -86,6 +83,11 @@ public class Main {
         Boite<User> userBoite = new Boite<User>(new User("tata"));
         stringBoite.getContenu();
         userBoite.getContenu();
+
+        Hangar<User> userHangar = new Hangar<User>();
+        userHangar.addElement(new User("Titi"));
+        userHangar.addElement(new User("TOTO"));
+        System.out.println(userHangar.getAll());
 
     }
 }

@@ -1,20 +1,22 @@
 package org.example.exercices;
 
+import java.util.ArrayList;
+
 public class Hangar<T> {
 
-    private T[] tableau;
+    private ArrayList<T> tableau;
 
-    public Hangar(int taille){
-        tableau =(T[]) new Object[taille];
+    public Hangar(){
+        tableau = new ArrayList<T>();
     }
 
 
-    public T[] getAll(){
+    public ArrayList<T> getAll(){
         return tableau;
     }
 
-    public void addElement(int index,T value){
-        this.tableau[index] = value;
+    public void addElement(T value){
+        this.tableau.add(value);
     }
 
 }
