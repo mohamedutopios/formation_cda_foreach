@@ -1,5 +1,6 @@
 package org.example;
 
+import com.github.lalyos.jfiglet.FigletFont;
 import org.example.array.Array;
 import org.example.exercices.*;
 import org.example.generique.Boite;
@@ -13,11 +14,12 @@ import org.example.structure.Structure;
 import org.example.structure.Structure2;
 import org.example.variable.Variable;
 
+import java.io.IOException;
 import java.util.concurrent.Callable;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         // Variable.getVariable();
         // Operator.getOperator();
@@ -79,15 +81,21 @@ public class Main {
 //        System.out.println(today);
 //        System.out.println(tommorow);
 
-        Boite<String> stringBoite = new Boite<String>("TOTO");
-        Boite<User> userBoite = new Boite<User>(new User("tata"));
-        stringBoite.getContenu();
-        userBoite.getContenu();
+//        Boite<String> stringBoite = new Boite<String>("TOTO");
+//        Boite<User> userBoite = new Boite<User>(new User("tata"));
+//        stringBoite.getContenu();
+//        userBoite.getContenu();
+//
+//        Hangar<User> userHangar = new Hangar<User>();
+//        userHangar.addElement(new User("Titi"));
+//        userHangar.addElement(new User("TOTO"));
+//        System.out.println(userHangar.getAll());
 
-        Hangar<User> userHangar = new Hangar<User>();
-        userHangar.addElement(new User("Titi"));
-        userHangar.addElement(new User("TOTO"));
-        System.out.println(userHangar.getAll());
+        String acciiArt = FigletFont.convertOneLine("Hello ForEach !!!");
+
+        System.out.println(acciiArt);
+
+
 
     }
 }
