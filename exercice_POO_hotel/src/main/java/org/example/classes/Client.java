@@ -51,21 +51,14 @@ public class Client {
         this.phone = phone;
     }
 
-    public static int getNbClient() {
-        return nbClient;
-    }
-
-    public static void setNbClient(int nbClient) {
-        Client.nbClient = nbClient;
-    }
-
     @Override
     public String toString() {
-        return "Client : " +
-                "id=" + id +
-                ", nom='" + nom + '\'' +
-                ", prenom='" + prenom + '\'' +
-                ", phone='" + phone + '\'' +
+        return id + " ) "+
+                "nom = " + nom +
+                ", prenom = " + prenom +
+                ", phone = " + phone +
                 '.';
     }
+
+    // 0 ) nom = toto, prenom = tata, phone = 01234.
 }

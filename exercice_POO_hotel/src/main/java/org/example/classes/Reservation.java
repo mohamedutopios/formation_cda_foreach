@@ -21,7 +21,6 @@ public class Reservation {
         this.id = nbReservation++;
     }
 
-
     public int getId() {
         return id;
     }
@@ -64,18 +63,22 @@ public class Reservation {
 
     @Override
     public String toString() {
-        String statusString;
-//        if(statut){
-//            statusString = "Reservation en cours";
-//        }else {
-//            statusString = "Reservation annulée ou fini";
-//        }
-        // test ? retour si true : retour si false
-        statusString = statut ? "Reservation en cours" : "Reservation annulée ou fini";
-        String message = id + ")"+ statusString + "pour le client : \n"
-                + client + "Liste des chambres reservées : \n";
+            /*
+        String statutString = "";
+        if(statut){
+            statutString = "Reservation en cours";
+        }else {
+            statutString = "Reservation annulée ou fini";
+        }
+
+             */
+        String statutString = statut ? "Reservation en cours" : "Reservation annulée ou fini";
+        String message = id + ")"+
+                statutString +
+                " pour le client : \n" + client +
+                "Liste des chambres reservées : \n";
         for (Chambre chambre : listeChambres) {
-            message += chambre + "\n";
+            message += chambre +"\n";
         }
         return message;
     }
