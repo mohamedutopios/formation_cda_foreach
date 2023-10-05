@@ -16,6 +16,7 @@ public class Exo1 {
 
     }
 
+
     public static void getExercice2() {
 
         System.out.println("Quel est votre nom :");
