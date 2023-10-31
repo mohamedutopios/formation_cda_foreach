@@ -15,3 +15,7 @@ Un etudiant est caracterise par :
 - un nom (lastname)
 - un prenom (firstname)
 - un age (age)
+
+Bonus :
+
+- un endpoint pour rechercher un student d'apres son nom
