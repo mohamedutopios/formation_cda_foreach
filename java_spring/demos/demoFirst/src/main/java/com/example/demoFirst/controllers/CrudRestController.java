@@ -1,6 +1,7 @@
 package com.example.demoFirst.controllers;
 
 
+import com.example.demoFirst.models.Person;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,8 +25,8 @@ public class CrudRestController {
     }
 
     @PostMapping // POST http://localhost:8081/api/v1/crud
-    public String create(@RequestBody String message){
-        return "Votre message est :"+ message;
+    public Person create(@RequestBody Person person){
+        return person;
     }
 
     @DeleteMapping("/{id}")  // Delete http://localhost:8081/api/v1/crud/x
