@@ -12,5 +12,12 @@
 
 <span th:replace="~{home :: paragraphe}"></span>
 
+<hr>
+
+<form  th:action="@{/submitForm}" th:object="${personSubmit}"  method="post">
+        <input th:field="*{name}" type="text" placeholder="mon texte" required>
+    <button type="submit">Mon Bouton</button>
+</form>
+
 </body>
 </html>
