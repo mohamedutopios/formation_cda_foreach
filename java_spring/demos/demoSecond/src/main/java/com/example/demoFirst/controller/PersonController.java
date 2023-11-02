@@ -4,9 +4,7 @@ package com.example.demoFirst.controller;
 import com.example.demoFirst.model.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class PersonController {
@@ -30,6 +28,12 @@ public class PersonController {
         System.out.println(person);
         System.out.println(person.getName());
         return "redirect:/";
+    }
+
+    @GetMapping("/person")
+    public String showOnePerson(@RequestParam("personName") String name,Model model){
+        model.addAttribute("myName",name);
+        return "/person/person";
     }
 
 }
