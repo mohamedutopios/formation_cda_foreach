@@ -24,7 +24,7 @@
             <td th:text="${s.firstName}"></td>
             <td th:text="${s.lastName}"></td>
             <td th:text="${s.age}"></td>
-            <td >voir détail</td>
+            <td ><a th:href="@{/student/{id}(id=${s.id})}" class="btn btn-outline-info" ><i class="bi bi-eye"></i> Details</a></td>
         </tr>
         </tbody>
     </table>
