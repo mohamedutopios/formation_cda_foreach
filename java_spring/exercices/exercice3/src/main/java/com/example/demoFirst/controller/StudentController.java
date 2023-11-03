@@ -38,8 +38,14 @@ public class StudentController {
    // <form th:action="@{/submitForm}" th:object="${studentSubmit}" method="post">
     @PostMapping("/submitForm")
     public String submitForm(@ModelAttribute("studentSubmit") Student studentSubmit ){
+        System.out.println(studentSubmit.getId());
         System.out.println(studentSubmit);
-        studentService.createStudent(studentSubmit);
+        if(studentSubmit.getId() == null){
+            studentService.createStudent(studentSubmit);
+        }else {
+            studentService.updateStudent(studentSubmit.getId(), studentSubmit);
+        }
+
         return "redirect:/students";
     }
 
