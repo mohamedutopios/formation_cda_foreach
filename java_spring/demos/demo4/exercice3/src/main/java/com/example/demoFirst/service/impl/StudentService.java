@@ -36,10 +36,22 @@ public class StudentService implements IStudentService {
 
         studentRepository.save(updateStudent);
     }
-
     @Override
     public void deleteStudent(Long id) {
         studentRepository.deleteById(id);
     }
+
+    @Override
+    public Optional<List<Student>> findByLastName(String lastName){
+        List<Student> listes = studentRepository.searchByLastName(lastName);
+        return listes.isEmpty() ? Optional.empty() : Optional.of(listes);
+    }
+
+    @Override
+    public Optional<List<Student>> findByAgeGreaterThan(int age) {
+        List<Student> listes = studentRepository.findByAgeGreaterThan(age);
+        return listes.isEmpty() ? Optional.empty() : Optional.of(listes);
+    }
+
 
 }

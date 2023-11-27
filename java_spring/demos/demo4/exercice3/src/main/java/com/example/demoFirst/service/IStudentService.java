@@ -16,4 +16,9 @@ public interface IStudentService {
     void updateStudent(Student updateStudent);
 
     void deleteStudent(Long id);
+
+    Optional<List<Student>> findByLastName(String lastname);
+    Optional<List<Student>> findByAgeGreaterThan(int age);
+
+
 }
