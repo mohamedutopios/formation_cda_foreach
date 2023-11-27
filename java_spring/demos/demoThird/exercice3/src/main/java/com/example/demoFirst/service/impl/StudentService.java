@@ -25,17 +25,17 @@ public class StudentService implements IStudentService {
 
     @Override
     public Student getStudentById(Long id) {
-        return null;
+        return studentRepository.findById(id);
     }
 
     @Override
     public Student createStudent(Student student) {
-        return null;
+        return studentRepository.save(student);
     }
 
     @Override
-    public Student updateStudent(Long id, Student updateStudent) {
-        return null;
+    public void updateStudent(Student updateStudent) {
+        studentRepository.update(updateStudent);
     }
 
     @Override

@@ -30,9 +30,9 @@ public class StudentRestController {
         return studentService.createStudent(student);
     }
 
-    @PutMapping("/{id}")
-    public Student updateStudent(@PathVariable Long id,@RequestBody Student student){
-        return studentService.updateStudent(id,student);
+    @PutMapping()
+    public void updateStudent(@RequestBody Student student){
+        studentService.updateStudent(student);
     }
 
     @DeleteMapping("/{id}")
