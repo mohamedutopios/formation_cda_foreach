@@ -49,7 +49,7 @@ public class StudentService implements IStudentService {
 
     @Override
     public Optional<List<Student>> findByAgeGreaterThan(int age) {
-        List<Student> listes = studentRepository.findByAgeGreaterThan(age);
+        List<Student> listes = studentRepository.searchByAge(age);
         return listes.isEmpty() ? Optional.empty() : Optional.of(listes);
     }
 
