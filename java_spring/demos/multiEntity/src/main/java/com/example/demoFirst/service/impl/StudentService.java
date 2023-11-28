@@ -17,31 +17,6 @@ public class StudentService implements IStudentService {
     private StudentRepository studentRepository;
 
     @Override
-    public List<Student> getAllStudents() {
-        return studentRepository.findAll();
-    }
-
-    @Override
-    public Optional<Student> getStudentById(Long id) {
-        return studentRepository.findById(id);
-    }
-
-    @Override
-    public Student createStudent(Student student) {
-        return studentRepository.save(student);
-    }
-
-    @Override
-    public void updateStudent(Student updateStudent) {
-
-        studentRepository.save(updateStudent);
-    }
-    @Override
-    public void deleteStudent(Long id) {
-        studentRepository.deleteById(id);
-    }
-
-    @Override
     public Optional<List<Student>> findByLastName(String lastName){
         List<Student> listes = studentRepository.searchByLastName(lastName);
         return listes.isEmpty() ? Optional.empty() : Optional.of(listes);
@@ -54,4 +29,23 @@ public class StudentService implements IStudentService {
     }
 
 
+    @Override
+    public List<Student> findall() {
+        return studentRepository.findAll();
+    }
+
+    @Override
+    public Optional<Student> findById(Long id) {
+        return studentRepository.findById(id);
+    }
+
+    @Override
+    public Student save(Student entity) {
+        return studentRepository.save(entity);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        studentRepository.deleteById(id);
+    }
 }

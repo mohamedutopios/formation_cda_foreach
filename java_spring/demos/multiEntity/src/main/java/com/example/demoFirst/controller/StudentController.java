@@ -11,34 +11,31 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/students")
-public class StudentRestController {
+public class StudentController {
 
     @Autowired
     private  IStudentService studentService;
 
     @GetMapping
     public List<Student> getAllStudents(){
-        return studentService.getAllStudents();
+        return studentService.findall();
     }
 
     @GetMapping("/{id}")
     public Student getStudentById(@PathVariable Long id){
-        return studentService.getStudentById(id).get();
+        return studentService.findById(id).get();
     }
 
     @PostMapping
     public Student createStudent(@RequestBody Student student){
-        return studentService.createStudent(student);
+        return studentService.save(student);
     }
 
-    @PutMapping()
-    public void updateStudent(@RequestBody Student student){
-        studentService.updateStudent(student);
-    }
+
 
     @DeleteMapping("/{id}")
     public void deleteStudent(@PathVariable Long id){
-        studentService.deleteStudent(id);
+        studentService.deleteById(id);
     }
 
 
