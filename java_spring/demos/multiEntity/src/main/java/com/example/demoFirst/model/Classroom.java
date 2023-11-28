@@ -1,5 +1,6 @@
 package com.example.demoFirst.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -11,10 +12,12 @@ import java.util.Set;
 public class Classroom {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
     @OneToMany(mappedBy = "classroom")
+    @JsonIgnore
     private Set<Student> students;
+
 }

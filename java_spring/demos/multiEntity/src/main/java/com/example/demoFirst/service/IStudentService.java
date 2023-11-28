@@ -10,5 +10,8 @@ public interface IStudentService extends IGenericService<Student, Long>{
     Optional<List<Student>> findByLastName(String lastname);
     Optional<List<Student>> findByAgeGreaterThan(int age);
 
+    List<Student> findByNameCourseName(String courseName);
+
+
 
 }

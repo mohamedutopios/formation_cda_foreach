@@ -28,6 +28,11 @@ public class StudentService implements IStudentService {
         return listes.isEmpty() ? Optional.empty() : Optional.of(listes);
     }
 
+    @Override
+    public List<Student> findByNameCourseName(String courseName) {
+        return studentRepository.findByCourseName(courseName);
+    }
+
 
     @Override
     public List<Student> findall() {

@@ -20,4 +20,8 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
     @Query("SELECT s FROM Student s WHERE s.age >= :age")
     List<Student> searchByAge(int age);
 
+    @Query("SELECT s FROM Student s JOIN s.courses c WHERE c.name = :courseName")
+    List<Student> findByCourseName(@Param("courseName") String courseName);
+
+
 }

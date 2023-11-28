@@ -1,6 +1,8 @@
 package com.example.demoFirst.model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -23,7 +25,7 @@ public class Student {
 
     private int age;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name="address_id")
     private Address address;
 
@@ -31,11 +33,11 @@ public class Student {
     @JoinColumn(name="classroom_id")
     private Classroom classroom;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name="student_course",
             joinColumns = @JoinColumn(name="student_id"),
             inverseJoinColumns = @JoinColumn(name="course_id"))
+    @JsonManagedReference
     private Set<Course> courses;
-
 
 }

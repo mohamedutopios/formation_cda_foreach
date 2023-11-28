@@ -31,6 +31,10 @@ public class StudentController {
         return studentService.save(student);
     }
 
+    @GetMapping("/course")
+    public List<Student> getStudentByCourseName(@RequestParam String courseName){
+        return studentService.findByNameCourseName(courseName);
+    }
 
 
     @DeleteMapping("/{id}")
