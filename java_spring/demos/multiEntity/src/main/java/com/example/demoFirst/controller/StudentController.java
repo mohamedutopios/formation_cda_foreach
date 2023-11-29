@@ -1,13 +1,16 @@
 package com.example.demoFirst.controller;
 
+import com.example.demoFirst.model.Course;
 import com.example.demoFirst.model.Student;
 import com.example.demoFirst.service.IStudentService;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/api/v1/students")
@@ -15,6 +18,7 @@ public class StudentController {
 
     @Autowired
     private  IStudentService studentService;
+
 
     @GetMapping
     public List<Student> getAllStudents(){
@@ -36,6 +40,22 @@ public class StudentController {
         return studentService.findByNameCourseName(courseName);
     }
 
+
+    @PostMapping("/{studentId}/addCourse")
+    public ResponseEntity<Student> addCourseStudent(
+                @PathVariable Long studentId,
+                @RequestBody Set<Long> courseIds){
+        Student updateStudent = studentService.addStudentCourse(studentId,courseIds);
+        return ResponseEntity.ok(updateStudent);
+
+    }
+
+
+
+    @GetMapping("/{id}/courses")
+    public Set<Course> getCourseByStudentId(@PathVariable Long id){
+     return studentService.getCoursesByStudentId(id);
+    }
 
     @DeleteMapping("/{id}")
     public void deleteStudent(@PathVariable Long id){
