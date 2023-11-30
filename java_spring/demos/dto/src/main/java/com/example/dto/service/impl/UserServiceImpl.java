@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
         return (UserReadDto) dtoUtils.convertToDto(user1, new UserReadDto());
     }
 
-    public Optional<User> getUserById(Integer id) {
-        return userRepository.findById(id);
+    public UserReadDto getUserById(Integer id) {
+        return (UserReadDto) dtoUtils.convertToDto(userRepository.findById(id).get(), new UserReadDto());
     }
 }

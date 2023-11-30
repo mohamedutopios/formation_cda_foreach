@@ -10,6 +10,6 @@ import java.util.Optional;
 public interface UserService {
 
     UserReadDto createUser(UserCreateDto user);
-   Optional<UserReadDto> getUserById(Integer id);
+   UserReadDto getUserById(Integer id);
 
 }
