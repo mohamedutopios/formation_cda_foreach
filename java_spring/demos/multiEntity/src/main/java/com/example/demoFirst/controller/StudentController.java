@@ -4,7 +4,9 @@ import com.example.demoFirst.model.Course;
 import com.example.demoFirst.model.Student;
 import com.example.demoFirst.service.IStudentService;
 import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,8 +33,9 @@ public class StudentController {
     }
 
     @PostMapping
-    public Student createStudent(@RequestBody Student student){
-        return studentService.save(student);
+    public ResponseEntity<Student> createStudent(@Valid @RequestBody Student student){
+        Student student1 =studentService.save(student);
+        return ResponseEntity.status(HttpStatus.CREATED).body(student1);
     }
 
     @GetMapping("/course")
