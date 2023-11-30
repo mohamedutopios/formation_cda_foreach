@@ -23,12 +23,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserReadDto createUser(UserCreateDto userCreateDto) {
-     User user = dtoUtils.convertToEntity(new User(), userCreateDto);
+     User user = dtoUtils.convertToEntity(userCreateDto, User.class);
      User user1 = userRepository.save(user);
-        return (UserReadDto) dtoUtils.convertToDto(user1, new UserReadDto());
+        return (UserReadDto) dtoUtils.convertToDto(user1, UserReadDto.class);
     }
 
     public UserReadDto getUserById(Integer id) {
-        return (UserReadDto) dtoUtils.convertToDto(userRepository.findById(id).get(), new UserReadDto());
+        return (UserReadDto) dtoUtils.convertToDto(userRepository.findById(id).get(), UserReadDto.class);
     }
 }
